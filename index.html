@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Johnson</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#666666',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .section-line {
+                width: 40px;
+                height: 1px;
+                background-color: #ccc;
+                margin: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-white text-primary antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white z-50 py-4 border-b border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-sm font-medium">Sarah Johnson</a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#about" class="text-xs text-secondary hover:text-primary transition-colors">About</a>
+                    <a href="#research" class="text-xs text-secondary hover:text-primary transition-colors">Research</a>
+                    <a href="#publications" class="text-xs text-secondary hover:text-primary transition-colors">Publications</a>
+                    <a href="#ta" class="text-xs text-secondary hover:text-primary transition-colors">TA Experience</a>
+                    <a href="#contact" class="text-xs text-secondary hover:text-primary transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-secondary hover:text-primary">
+                        <i class="fa fa-bars text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="container mx-auto px-6 py-3 space-y-2">
+                <a href="#about" class="block text-xs text-secondary hover:text-primary py-2 transition-colors">About</a>
+                <a href="#research" class="block text-xs text-secondary hover:text-primary py-2 transition-colors">Research</a>
+                <a href="#publications" class="block text-xs text-secondary hover:text-primary py-2 transition-colors">Publications</a>
+                <a href="#ta" class="block text-xs text-secondary hover:text-primary py-2 transition-colors">TA Experience</a>
+                <a href="#contact" class="block text-xs text-secondary hover:text-primary py-2 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <h1 class="text-2xl md:text-3xl font-light mb-4 tracking-tight">Ph.D. Candidate in Computer Science</h1>
+                <p class="text-sm text-secondary leading-relaxed max-w-lg">
+                    Specializing in Artificial Intelligence, Machine Learning, and Computational Linguistics at Stanford University.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-sm font-medium uppercase tracking-wider mb-6">About</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="md:col-span-1">
+                        <img src="https://picsum.photos/id/64/300/300" alt="Sarah Johnson" class="w-full h-auto">
+                    </div>
+                    <div class="md:col-span-3">
+                        <p class="text-sm text-secondary leading-relaxed mb-4">
+                            I am a Ph.D. candidate in the Computer Science Department at Stanford University, working on natural language processing and ethical AI under the supervision of Professor David Miller.
+                        </p>
+                        <p class="text-sm text-secondary leading-relaxed">
+                            My research focuses on developing more robust language models with improved contextual understanding and reduced biases.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container mx-auto px-6">
+        <div class="max-w-2xl mx-auto section-line"></div>
+    </div>
+
+    <!-- Research Section -->
+    <section id="research" class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-sm font-medium uppercase tracking-wider mb-6">Research</h2>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-sm font-medium mb-2">Natural Language Understanding</h3>
+                        <p class="text-xs text-secondary leading-relaxed">
+                            Developing models that better understand context, ambiguity, and nuance in human language, with applications to question answering and information retrieval.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-sm font-medium mb-2">Ethical AI & Fairness</h3>
+                        <p class="text-xs text-secondary leading-relaxed">
+                            Investigating methods to detect and mitigate biases in AI systems, and developing frameworks for responsible AI deployment in sensitive domains.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-sm font-medium mb-2">Multilingual NLP</h3>
+                        <p class="text-xs text-secondary leading-relaxed">
+                            Creating language models that work effectively across low-resource languages, reducing the digital divide and enabling global access to NLP technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container mx-auto px-6">
+        <div class="max-w-2xl mx-auto section-line"></div>
+    </div>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-sm font-medium uppercase tracking-wider mb-6">Publications</h2>
+                
+                <div class="space-y-6">
+                    <!-- Publication 1 -->
+                    <div>
+                        <h3 class="text-sm font-medium mb-1">Contextual Understanding in Pre-trained Language Models</h3>
+                        <p class="text-xs text-secondary mb-1"><strong>Sarah Johnson</strong>, Michael Chen, Lisa Wang</p>
+                        <p class="text-xs text-secondary italic">NeurIPS, 2023</p>
+                    </div>
+                    
+                    <!-- Publication 2 -->
+                    <div>
+                        <h3 class="text-sm font-medium mb-1">Measuring and Mitigating Bias in NLP Systems</h3>
+                        <p class="text-xs text-secondary mb-1">David Kim, <strong>Sarah Johnson</strong>, Emily Zhang</p>
+                        <p class="text-xs text-secondary italic">ACL, 2022</p>
+                    </div>
+                    
+                    <!-- Publication 3 -->
+                    <div>
+                        <h3 class="text-sm font-medium mb-1">Cross-lingual Transfer Learning for Low-Resource Languages</h3>
+                        <p class="text-xs text-secondary mb-1"><strong>Sarah Johnson</strong>, Raj Patel, Aisha Khan</p>
+                        <p class="text-xs text-secondary italic">ICML, 2022</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <a href="#" class="text-xs text-secondary hover:text-primary transition-colors">View all publications →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container mx-auto px-6">
+        <div class="max-w-2xl mx-auto section-line"></div>
+    </div>
+
+    <!-- TA Experience Section -->
+    <section id="ta" class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-sm font-medium uppercase tracking-wider mb-6">Teaching Assistant Experience</h2>
+                
+                <div class="space-y-6">
+                    <!-- TA Position 1 -->
+                    <div>
+                        <h3 class="text-sm font-medium mb-1">CS 224N: Natural Language Processing with Deep Learning</h3>
+                        <p class="text-xs text-secondary">Spring 2023, 2022 • Graduate level • Instructor: Prof. David Miller</p>
+                        <p class="text-xs text-secondary mt-1">Led discussion sections, graded assignments, and held office hours for 120 students</p>
+                    </div>
+                    
+                    <!-- TA Position 2 -->
+                    <div>
+                        <h3 class="text-sm font-medium mb-1">CS 124: From Languages to Information</h3>
+                        <p class="text-xs text-secondary">Fall 2021, 2020 • Undergraduate level • Instructor: Prof. Lisa Chen</p>
+                        <p class="text-xs text-secondary mt-1">Designed homework assignments, led lab sessions, and graded exams for 240 students</p>
+                    </div>
+                    
+                    <!-- TA Position 3 -->
+                    <div>
+                        <h3 class="text-sm font-medium mb-1">CS 106B: Programming Abstractions</h3>
+                        <p class="text-xs text-secondary">Winter 2020 • Undergraduate level • Instructor: Prof. James Wilson</p>
+                        <p class="text-xs text-secondary mt-1">Tutored students, graded programming projects, and held weekly review sessions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container mx-auto px-6">
+        <div class="max-w-2xl mx-auto section-line"></div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-sm font-medium uppercase tracking-wider mb-6">Contact</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-xs text-secondary">sarahj@cs.stanford.edu</p>
+                            </div>
+                            
+                            <div>
+                                <p class="text-xs text-secondary">Computer Science Department</p>
+                                <p class="text-xs text-secondary">Stanford University, Stanford, CA 94305</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-100 mt-8">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <p class="text-xs text-secondary text-center">
+                    © 2023 Sarah Johnson
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+    
