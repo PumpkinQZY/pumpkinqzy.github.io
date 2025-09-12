@@ -41,40 +41,9 @@
     </style>
 </head>
 <body class="font-inter bg-white text-primary antialiased">
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 bg-white z-50 py-4 border-b border-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="flex justify-between items-center">
-                <a href="#" class="text-sm font-medium">Qizheng You</a>
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="#about" class="text-xs text-secondary hover:text-primary transition-colors">About</a>
-                    <a href="#research" class="text-xs text-secondary hover:text-primary transition-colors">Research</a>
-                    <a href="#publications" class="text-xs text-secondary hover:text-primary transition-colors">Publications</a>
-                    <a href="#ta" class="text-xs text-secondary hover:text-primary transition-colors">TA Experience</a>
-                    <a href="#contact" class="text-xs text-secondary hover:text-primary transition-colors">Contact</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-secondary hover:text-primary">
-                        <i class="fa fa-bars text-xs"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
-            <div class="container mx-auto px-6 py-3 space-y-2">
-                <a href="#about" class="block text-xs text-secondary hover:text-primary py-2 transition-colors">About</a>
-                <a href="#research" class="block text-xs text-secondary hover:text-primary py-2 transition-colors">Research</a>
-                <a href="#publications" class="block text-xs text-secondary hover:text-primary py-2 transition-colors">Publications</a>
-                <a href="#ta" class="block text-xs text-secondary hover:text-primary py-2 transition-colors">TA Experience</a>
-                <a href="#contact" class="block text-xs text-secondary hover:text-primary py-2 transition-colors">Contact</a>
-            </div>
-        </div>
-    </nav>
 
     <!-- Hero Section -->
-    <header class="pt-32 pb-16">
+    <header class="pt-16 pb-16">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto">
                 <h1 class="text-2xl md:text-3xl font-light mb-4 tracking-tight">Ph.D. Candidate in Mathematics</h1>
@@ -164,13 +133,6 @@
 
     <!-- JavaScript -->
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
